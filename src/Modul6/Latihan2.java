@@ -5,39 +5,47 @@
  */
 package Modul6;
 
+
+
 /**
  *
  * @author HP Folio 1040
  */
 
 import javax.swing.JOptionPane;
-
 public class Latihan2 {
-    public static void main(String[] args) {
-        int nilai1 = 0;
-        int nilai2 = 0;
-        int nilai3 = 0;
-        double rata;
+     public static void main(String[] args) {
+        String huruf = "";
+        int nilai;
         
-        nilai1 = Integer.parseInt(JOptionPane.showInputDialog("Nilai 1"));
-        nilai2 = Integer.parseInt(JOptionPane.showInputDialog("Nilai 2"));
-        nilai3 = Integer.parseInt(JOptionPane.showInputDialog("Nilai 3"));
+        huruf = JOptionPane.showInputDialog("Masukkan nilai 1-10");
         
-        rata = (nilai1 + nilai2 + nilai3)/3;
+        nilai = Integer.parseInt(huruf);
         
-        String hasil="";
-        
-        hasil += "Nilai 1 : "+nilai1+"\n";
-        hasil += "Nilai 2 : "+nilai2+"\n";
-        hasil += "Nilai 3 : "+nilai3+"\n";
-        hasil += "Rata-rata dari nilai tersebut "+rata+"\n";
-        
-        if(rata >= 60){
-            hasil += ":-)";
+        if(nilai == 1){
+            huruf = "Satu";
+        }else if(nilai == 2){
+            huruf = "Dua";
+        }else if(nilai == 3){
+            huruf = "Tiga";
+        }else if(nilai == 4){
+            huruf = "Empat";
+        }else if(nilai == 5){
+            huruf = "Lima";
+        }else if(nilai == 6){
+            huruf = "Enam";
+        }else if(nilai == 7){
+            huruf = "Tujuh";
+        }else if(nilai == 8){
+            huruf = "Delapan";
+        }else if(nilai == 9){
+            huruf = "Sembilan";
+        }else if(nilai == 10){
+            huruf = "Sepuluh";
         }else{
-            hasil += ":-(";
+            huruf = "Invalid number!";
         }
         
-        JOptionPane.showMessageDialog(null, hasil);
+        JOptionPane.showMessageDialog(null, huruf);
     }
 }
